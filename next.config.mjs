@@ -69,11 +69,11 @@ const nextConfig = {
             value: [
               "default-src 'self'",
               "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.com https://*.vercel-insights.com https://va.vercel-scripts.com",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net",
               "img-src 'self' data: https://xwb0gyneaxhzjucv.public.blob.vercel-storage.com https://firebasestorage.googleapis.com https://www.google-analytics.com",
-              "font-src 'self' https://fonts.gstatic.com https://use.typekit.net",
+              "font-src 'self' https://fonts.gstatic.com https://use.typekit.net https://p.typekit.net",
               "media-src 'self' https://firebasestorage.googleapis.com",
-              "connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://*.vercel-insights.com",
+              "connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://*.vercel-insights.com https://va.vercel-scripts.com",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'"
@@ -89,17 +89,24 @@ const nextConfig = {
                 https://vercel.com
                 https://*.vercel-insights.com
                 https://va.vercel-scripts.com;
-              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net;
+              style-src 'self' 'unsafe-inline'
+                https://fonts.googleapis.com
+                https://use.typekit.net
+                https://p.typekit.net;
               img-src 'self' data:
                 https://xwb0gyneaxhzjucv.public.blob.vercel-storage.com
                 https://firebasestorage.googleapis.com
                 https://www.google-analytics.com;
-              font-src 'self' https://fonts.gstatic.com https://use.typekit.net;
+              font-src 'self'
+                https://fonts.gstatic.com
+                https://use.typekit.net
+                https://p.typekit.net;
               media-src 'self' https://firebasestorage.googleapis.com;
               connect-src 'self'
                 https://www.google-analytics.com
                 https://vitals.vercel-insights.com
-                https://*.vercel-insights.com;
+                https://*.vercel-insights.com
+                https://va.vercel-scripts.com;
             `.replace(/\s{2,}/g, " ").trim(),
           },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },

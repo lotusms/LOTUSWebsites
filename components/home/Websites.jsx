@@ -119,13 +119,15 @@ const Websites = () => {
             {slides.map((site, idx) => (
               <motion.div
                 key={`${site.name}-${idx}`}
-                className="card min-w-[400px] lg:min-w-[520px] bg-slate-800 text-slate-300 rounded-lg overflow-hidden shadow-md"
+                className="card min-w-[375px] lg:min-w-[520px] bg-slate-800 text-slate-300 rounded-lg overflow-hidden shadow-md"
               >
                 <img
                   src={site.image}
                   alt={site.name}
                   draggable={false}
-                  className="h-[420px] lg:h-[520px] w-full object-cover"
+                  width="520"
+                  height="420"
+                  className="w-full h-auto object-cover"
                 />
                 <div className="px-4 py-2 flex items-center justify-between">
                   <h3 className="font-sfMedium uppercase">{site.name}</h3>
