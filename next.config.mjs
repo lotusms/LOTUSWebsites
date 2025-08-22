@@ -14,7 +14,6 @@ const nextConfig = {
   reactStrictMode: false,
   images: {
     formats: ['image/webp'],
-    domains: ['xwb0gyneaxhzjucv.public.blob.vercel-storage.com'],
     remotePatterns: [
       {
         protocol: "https",
@@ -69,11 +68,11 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.com https://*.vercel-insights.com",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://vercel.com https://*.vercel-insights.com https://va.vercel-scripts.com",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net",
               "img-src 'self' data: https://xwb0gyneaxhzjucv.public.blob.vercel-storage.com https://firebasestorage.googleapis.com https://www.google-analytics.com",
-              "font-src 'self' https://fonts.gstatic.com",
-              "media-src 'self' https://firebasestorage.googleapis.com", // ✅ added for videos
+              "font-src 'self' https://fonts.gstatic.com https://use.typekit.net",
+              "media-src 'self' https://firebasestorage.googleapis.com",
               "connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com https://*.vercel-insights.com",
               "frame-ancestors 'none'",
               "base-uri 'self'",
@@ -88,18 +87,19 @@ const nextConfig = {
                 https://www.googletagmanager.com
                 https://www.google-analytics.com
                 https://vercel.com
-                https://*.vercel-insights.com;
-              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+                https://*.vercel-insights.com
+                https://va.vercel-scripts.com;
+              style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net;
               img-src 'self' data:
                 https://xwb0gyneaxhzjucv.public.blob.vercel-storage.com
                 https://firebasestorage.googleapis.com
                 https://www.google-analytics.com;
-              font-src 'self' https://fonts.gstatic.com;
+              font-src 'self' https://fonts.gstatic.com https://use.typekit.net;
+              media-src 'self' https://firebasestorage.googleapis.com;
               connect-src 'self'
                 https://www.google-analytics.com
                 https://vitals.vercel-insights.com
                 https://*.vercel-insights.com;
-              report-uri https://yourdomain.report-uri.com/r/d/csp/reportOnly;
             `.replace(/\s{2,}/g, " ").trim(),
           },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },

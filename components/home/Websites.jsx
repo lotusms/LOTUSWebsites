@@ -8,34 +8,43 @@ import websites from "@/data/websites"
 
 const Websites = () => {
   const carouselRef = useRef(null)
+  const containerRef = useRef(null)
   const x = useMotionValue(0)
   const [cardWidth, setCardWidth] = useState(0)
   const [containerWidth, setContainerWidth] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
 
-  // Clones (last slide in front + first slide at end)
   const slides = [websites[websites.length - 1], ...websites, websites[0]]
   const total = websites.length
   const indexRef = useRef(0)
 
-  // Measure card width and container width
-  useEffect(() => {
-    if (carouselRef.current) {
+  // 🔑 Measure card + container width
+  const measure = () => {
+    if (carouselRef.current && containerRef.current) {
       const firstCard = carouselRef.current.querySelector(".card")
       if (firstCard) {
         const gap = parseInt(getComputedStyle(carouselRef.current).gap) || 0
         const cardW = firstCard.offsetWidth + gap
-        const containerW = carouselRef.current.offsetWidth
+        const containerW = containerRef.current.offsetWidth
         setCardWidth(cardW)
         setContainerWidth(containerW)
-
-        // ✅ Center first real card on mount
-        requestAnimationFrame(() => {
-          animateToIndex(0, true)
-        })
       }
     }
+  }
+
+  // Measure on mount + resize
+  useEffect(() => {
+    measure()
+    window.addEventListener("resize", measure)
+    return () => window.removeEventListener("resize", measure)
   }, [])
+
+  // Center once widths are ready
+  useEffect(() => {
+    if (cardWidth && containerWidth) {
+      animateToIndex(0, true)
+    }
+  }, [cardWidth, containerWidth])
 
   const handleDragEnd = (_, info) => {
     const delta = info.offset.x
@@ -43,7 +52,7 @@ const Websites = () => {
     let newIndex = indexRef.current + direction
 
     if (Math.abs(delta) < cardWidth / 4) {
-      newIndex = indexRef.current // snap back if drag too small
+      newIndex = indexRef.current
     }
 
     indexRef.current = newIndex
@@ -51,7 +60,6 @@ const Websites = () => {
   }
 
   const animateToIndex = (idx, instant = false) => {
-    // 🔑 Center active card
     const offset = (containerWidth - cardWidth) / 2
     const targetX = -(idx + 1) * cardWidth + offset
 
@@ -62,16 +70,16 @@ const Websites = () => {
     }
   }
 
-  // Handle loop reset
+  // Loop reset
   useEffect(() => {
     const unsubscribe = x.on("animationComplete", () => {
       if (indexRef.current >= total) {
         indexRef.current = 0
-        animateToIndex(indexRef.current, true) // jump instantly
+        animateToIndex(indexRef.current, true)
       }
       if (indexRef.current < 0) {
         indexRef.current = total - 1
-        animateToIndex(indexRef.current, true) // jump instantly
+        animateToIndex(indexRef.current, true)
       }
     })
     return () => unsubscribe()
@@ -95,7 +103,7 @@ const Websites = () => {
         </p>
 
         {/* Carousel */}
-        <div className="overflow-hidden relative">
+        <div className="overflow-hidden relative" ref={containerRef}>
           <motion.div
             ref={carouselRef}
             className={`flex gap-8 ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
