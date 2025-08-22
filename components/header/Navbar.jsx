@@ -4,6 +4,7 @@ import { IoCloseSharp, IoMenuSharp } from "react-icons/io5";
 import Logo from "./Logo";
 import EmailObfuscatedLink from '../global/EmailObfuscatedLink';
 import navigation from '@/data/navigation';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -16,13 +17,13 @@ const Navbar = () => {
     <header
       className="fixed inset-x-0 top-0 z-20 transition-colors duration-300 bg-black/20 backdrop-blur-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-        <a href="/" aria-current="page" className="flex items-center gap-3">
+        <Link href="/" aria-current="page" className="flex items-center gap-3">
           <Logo 
             fillLotus="fill-slate-200" 
             fillFlower="fill-green-600"
           />
           <span className="sr-only">LOTUS Websites</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navigation.map((item) => (

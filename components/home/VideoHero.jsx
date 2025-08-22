@@ -1,6 +1,6 @@
 import React from "react";
 import VideoHeroText from "./VideoHeroText";
-const video = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/Earth.mp4?alt=media&token=eb4b3e88-1400-4e12-b0ad-c7fee4a46cc5"
+const video = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/earth2.mp4?alt=media&token=549b9485-6e03-46e4-826a-e991909a789b"
 
 const VideoHero = () => {
 

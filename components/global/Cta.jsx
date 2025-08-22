@@ -1,28 +1,39 @@
 'use client';
 
-import { PhoneIcon } from '@heroicons/react/24/solid';
-import Section from './Section'
-import Link from 'next/link'
+import Button from "./Button";
+import useContactLinks from "@/hooks/useContactLinks";
+import PropTypes from "prop-types";
 
-const Cta = () => {
+const Cta = ({label = true, link=""}) => {
+  const { phoneLink, emailLink } = useContactLinks();
+
   return (
-    <>
-      <Section className="py-[70px]" variant="light">
-        <div className="mx-auto max-w-4xl">
-          <div className="flex flex-col items-center">
-            <h3 className="text-4xl font-playball text-center mb-4">Reach out to us for a free consultation and quote</h3> 
-            <Link 
-              href="tel:(717) 945-8132" 
-              passHref 
-              className="mt-4 text-xl font-sfBlack border border-black bg-black hover:bg-slate-300 hover:text-slate-800 transition ease-in-out duration-1000 px-3 py-1 rounded-md flex items-center justify-center">
-              <PhoneIcon className="size-5 me-2" />
-              (717) 945-8132
-            </Link>
-          </div>
+    <div className="flex flex-col lg:flex-row mt-4 gap-8 w-full items-center justify-between px-12 py-8 text-white">
+
+      <h3 className="text-2xl font-sfHeavy leading-relaxed">{label ? "Ready to Start Your Project?" : ""}</h3>
+      <div className="flex flex-col lg:flex-row justify-center items-center">
+        <div className="flex gap-4">
+          <Button as="a" href={phoneLink} variant="primary">
+            BOOK A CALL
+          </Button>
+          <Button as="a" href={emailLink} variant="primary">
+            EMAIL US
+          </Button> 
         </div>
-      </Section>
-    </>
+        <div className="flex justify-center items-center p-4">
+          <p className="flex w-full mx-auto">or</p>
+        </div>
+        <Button as="link" href={link} variant="secondary">
+          READ MORE
+        </Button>
+      </div>        
+    </div>
   )
 }
+
+Cta.propTypes = {
+  label: PropTypes.bool,
+  link: PropTypes.string,
+};
 
 export default Cta
