@@ -1,0 +1,402 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// @import url("https://use.typekit.net/qiv3xpz.css");
+
+// Lotus Websites
+// @import url("https://use.typekit.net/lle7kwn.css");
+
+@font-face {
+  font-family: 'Signature';
+  src: url('/fonts/signature/autografpersonaluseonly-mobm-webfont.woff2') format('woff2'),
+       url('/fonts/signature/autografpersonaluseonly-mobm-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "signature";
+  src: url("/fonts/shopping_script_demo.woff2") format("woff2"), url("/fonts/shopping_script_demo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display Ultralight";
+  src: url("/fonts/SF/SFProDisplay-Ultralight.woff2") format("woff2"), url("/fonts/SF/SFProDisplay-Ultralight.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display Ultralight";
+  src: url("/fonts/SF/SFCompactDisplay-Ultralight.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Ultralight.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display Light";
+  src: url("/fonts/SF/SFCompactDisplay-Light.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display Thin";
+  src: url("/fonts/SF/SFCompactDisplay-Thin.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Thin.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display Regular";
+  src: url("/fonts/SF/SFCompactDisplay-Regular.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display Medium";
+  src: url("/fonts/SF/SFCompactDisplay-Medium.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display SemiBold";
+  src: url("/fonts/SF/SFCompactDisplay-Semibold.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display Bold";
+  src: url("/fonts/SF/SFCompactDisplay-Bold.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display Black";
+  src: url("/fonts/SF/SFCompactDisplay-Black.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Black.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Compact Display Heavy";
+  src: url("/fonts/SF/SFCompactDisplay-Heavy.woff2") format("woff2"), url("/fonts/SF/SFCompactDisplay-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+$paragraph:     "Barlow", sans-serif;
+$barlow:        'Barlow', sans-serif;
+$novecento:     'novecento-sans-wide', sans-serif;
+$SFProDisplay:  'SF Pro Display Ultralight';
+$SFUltralight:  'SF Compact Display Ultralight';
+$SFLight:       'SF Compact Display Light';
+$SFThin:        'SF Compact Display Thin';
+$SFRegular:     'SF Compact Display Regular';
+$SFMedium:      'SF Compact Display Medium';
+$SFSemiBold:    'SF Compact Display SemiBold';
+$SFBold:        'SF Compact Display Bold';
+$SFBlack:       'SF Compact Display Black';
+$SFHeavy:       'SF Compact Display Heavy';
+
+.font-barlow        { font-family:$barlow; }
+.font-SFProDisplay  { font-family:$SFProDisplay; }
+.font-SFRegular     { font-family:$SFRegular; }
+.font-SFMedium      { font-family:$SFMedium; }
+.font-SFSemiBold    { font-family:$SFSemiBold; }
+.font-SFBold        { font-family:$SFBold; }
+.font-SFBlack       { font-family:$SFBlack; }
+.font-SFHeavy       { font-family:$SFHeavy; }
+.font-novecento     { font-family:$novecento; }
+
+body{
+  font-family: $SFRegular;
+  -webkit-font-smoothing: antialiased;  /* Safari, Chrome */
+  -moz-osx-font-smoothing: grayscale;   /* Firefox */
+}
+
+@layer utilities {
+  .bg-auto-100 {
+    @apply bg-[auto_100%];
+  }
+  .bg-auto-150 {
+    @apply bg-[auto_150%];
+  }
+  .bg-auto-170 {
+    @apply bg-[auto_170%];
+  }
+  .bg-auto-190 {
+    @apply bg-[auto_190%];
+  }
+  .bg-position {
+    @apply bg-[130%_110%];
+  }
+  .bg-position-sm {
+    @apply bg-[108%_110%];
+  }
+  // .bg-position-md {
+  //   @apply bg-[105%_75%];
+  // }
+  // .bg-position-lg {
+  //   @apply bg-[130%_70%];
+  // }
+  // .bg-position-xl {
+  //   @apply bg-[110%_70%];
+  // }
+}
+
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-950;
+  }
+  .main-layout {
+    // @apply bg-blue-500 ;
+  }
+
+  .gradient-section {
+    @apply bg-gradient-to-br from-sky-600 to-indigo-950 rounded-t-3xl relative z-20;
+
+    h2{
+      @apply text-slate-50;
+    }
+    p{
+      @apply text-slate-50;
+    }
+    .arrow-button {
+      @apply bg-slate-950 text-slate-50;
+      &:hover{
+        @apply bg-slate-600;
+      }
+      top:20px;
+    }
+    .heading-divider{
+      @apply bg-slate-50;
+    }
+    .large-list-divider{
+      @apply before:bg-slate-950 after:bg-slate-600 
+    }
+    .divider{
+      @apply border-slate-950;
+    }
+  }
+
+  .dark-section {
+    @apply bg-slate-800 text-slate-50;
+    .arrow-button {
+      @apply bg-slate-50 text-slate-950;
+      &:hover{
+        @apply bg-slate-600;
+      }
+      top:20px;
+    }
+    .heading-divider{
+      @apply bg-slate-50;
+    }
+    .lead{
+      @apply text-slate-200;
+    }
+    .large-list-divider{
+      @apply before:bg-slate-950 after:bg-slate-600
+    }
+    .divider{
+      @apply border-slate-50;
+    }
+  }
+
+  .light-section {
+    @apply bg-gradient-to-br from-sky-50 to-slate-100 text-slate-950 relative z-20;
+    .arrow-button {
+      @apply bg-slate-950 text-slate-50;
+      &:hover{
+        @apply bg-slate-600;
+      }
+      top:20px;
+    }
+    .heading-divider{
+      @apply bg-slate-950;
+    }
+    .lead{
+      @apply text-slate-600;
+    }
+    .large-list-divider{
+      @apply before:bg-slate-50 after:bg-slate-200
+    }
+    .divider{
+      @apply border-slate-950;
+    }
+  }
+
+  .blue-section {
+    @apply bg-sky-800 text-slate-50;
+    .arrow-button {
+      @apply bg-slate-950 text-slate-50;
+      &:hover{
+        @apply bg-slate-600;
+      }
+      top:20px;
+    }    
+    .large-list-divider{
+      @apply before:bg-slate-950 after:bg-slate-600
+    }
+    .divider{
+      @apply border-slate-950;
+    }
+  }
+
+  .slate-section {
+    @apply bg-slate-500;
+    h2{
+      @apply text-slate-50;
+    }
+    p{
+      @apply text-slate-50;
+    }
+    .arrow-button {
+      @apply bg-slate-950 text-slate-50;
+      &:hover{
+        @apply bg-slate-600;
+      }
+      top:20px;
+    }
+    .heading-divider{
+      @apply bg-slate-50 ;
+    }
+    .large-list-divider{
+      @apply before:bg-slate-950 after:bg-slate-600 
+    }
+    .divider{
+      @apply border-slate-950;
+    }
+  }
+  .image-section {
+    @apply relative z-20;
+    .arrow-button {
+      @apply bg-slate-950 text-slate-50;
+      &:hover{
+        @apply bg-slate-600;
+      }
+      top:20px;
+    }
+    .heading-divider{
+      @apply bg-slate-950;
+    }
+    .lead{
+      @apply text-slate-600;
+    }
+    .large-list-divider{
+      @apply before:bg-amber-600 after:bg-amber-400
+    }
+    .divider{
+      @apply border-slate-950;
+    }
+  }
+
+}
+
+// .signature {
+//   font-family: 'Signature', cursive;
+// }
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.opening-hours-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opening-hours-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.opening-hours-list li span {
+  color: #ffffff;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+} 
+
+.success-message {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.success-message.hidden {
+  opacity: 0;
+}
+
+.header-content {
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  overflow: hidden;
+  max-height: 0;
+  padding-top: 0;
+}
+
+.header-content.open {
+  max-height: 100vh; 
+  padding-top: 0.5rem;
+}
+
+.slick-arrow {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.slick-slide {
+  outline: 1px solid red; /* Debugging border to ensure slides are visible */
+}
+
+
+.placeholder {
+  filter: blur(10px);
+  transition: filter 0.3s;
+}
+.loaded {
+  filter: blur(0);
+}
+
+.blog-post a {
+  display: inline !important;
+  white-space: nowrap; 
+  text-decoration: underline; 
+  color: #3182ce;
+}
+

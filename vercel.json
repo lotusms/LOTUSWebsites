@@ -1,0 +1,14 @@
+{
+  "headers": [
+    {
+      "source": "/_next/image",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    }
+  ],
+  "installCommand": "export COREPACK_ENABLE_STRICT=0 && corepack enable && corepack prepare pnpm@9.7.0 --activate && corepack pnpm -v && corepack pnpm config set registry https://registry.npmjs.org/ && corepack pnpm install --no-frozen-lockfile",
+  "buildCommand": "pnpm build"
+}

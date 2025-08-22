@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+
+
+  RewriteRule ^services/?$ - [G]
+  RewriteRule ^pricing/?$ - [G]
+
+  Redirect 301 /blog.php /blog
+  Redirect 301 /about-lotus-marketing-solutions/ /about
+  Redirect 301 /user-usability-and-user-experience/ /blog/user-usability-and-user-experience
+  Redirect 301 /using-images-on-a-website.php /blog/using-images-on-a-website
+  Redirect 301 /web-maintenance.php /web-maintenance
+
+
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/jpeg .jpg .jpeg
+  AddType image/png .png
+  AddType image/gif .gif
+  AddType text/css .css
+  AddType application/javascript .js
+</IfModule>
