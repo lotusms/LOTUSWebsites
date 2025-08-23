@@ -10,9 +10,11 @@ import PageHead from '@/components/global/PageHead';
 import Link from 'next/link';
 import AwwwardWinning from '@/components/AwwwardWinning';
 import GrayCard from '@/components/global/GrayCard';
+import FullWidthSection from '@/components/global/FullWidthSection';
+import SvgDivider from '@/components/global/SvgDivider';
 const banner = bannerImages.webDesignImage;
 
-const cards = [
+const webbuilders = [
   {
     title: "Cookie Cutter Designs",
     description: "Cookie-cutter websites lack uniqueness, personalization, and differentiation, which can negatively impact your brand's credibility and online presence. Because you probably searched for a template related to your industry, chances are that others have as well. Then clients visiting your site will find similar websites between competitors.",
@@ -33,60 +35,18 @@ const cards = [
   },
 ]
 
-const packages = [
+const factors = [
   {
-    title: 'Starter',
-    subtitle: 'For Small Businesses & Startups',
-    description: 'Ideal for small businesses looking to establish a professional online presence. This package includes a custom-designed, high-performance website with up to 5 pages, mobile responsiveness, and basic on-page SEO to improve search visibility.',
-    features: [
-      'Custom-designed website (up to 5 pages)',
-      'Mobile & tablet responsive',
-      'Basic on-page SEO optimization',
-      'Google Analytics setup',
-      'Contact form integration'
-    ],
-    price: 'Staring at $2,500'
+    title: "Website Functionality Needs",
+    description: "Ecommerce websites are far more complex than your average lead generation website. You’ll discuss any additional functionality you may need with your WebFX strategist which will play a part in your web design quote."
   },
   {
-    title: 'Marketing',
-    subtitle: 'For Growing Businesses & Lead Generation',
-    description: 'Designed for businesses looking to expand their online reach and convert visitors into customers. This package includes a custom website with up to 20 pages, advanced on-page SEO, and conversion-focused design elements.',
-    features: [
-      'Custom website design (up to 20 pages)',
-      'Mobile-first design & optimization',
-      'Advanced on-page SEO (keyword optimization, meta tags, site speed)',
-      'Google My Business setup/optimization',
-      'Lead generation forms',
-      'Basic blog setup'
-    ],
-    price: 'Staring at $3,200'
+    title: "Project Timeline",
+    description: "Project needs often vary from ~3 months all the way to 12 months. Your team’s flexibility will determine how custom we can get with building you a website that helps you reach your business goals."
   },
   {
-    title: 'Sales',
-    subtitle: 'For Established Businesses & E-commerce',
-    description: 'Perfect for businesses that want a powerful website optimized for sales and conversions. Includes a custom-designed website with unlimited pages, premium on-page SEO, and integrated lead capture tools.',
-    features: [
-      'Custom-designed website (unlimited pages)',
-      'Premium on-page SEO (schema markup, advanced keyword research)',
-      'CRM & email marketing integrations',
-      'E-commerce functionality (if needed)',
-      'Basic blog setup',
-      'Conversion-focused design & sales funnel integration'
-    ],
-    price: 'Staring at $5,700'
-  },
-  {
-    title: 'Enterprise',
-    subtitle: 'For Large Businesses with Custom Needs',
-    description: 'A fully customized website and digital strategy tailored to your specific business needs. We provide bespoke design solutions, advanced integrations, and ongoing strategic support to help you achieve your business goals.',
-    features: [
-      'Bespoke web app design & development',
-      'Custom API & third-party integrations',
-      'Enterprise-level security & performance optimization',
-      'Ongoing strategic support & digital growth consulting',
-      'Intended for software-like functionality',
-    ],
-    price: 'Contact Us for a Quote'
+    title: "Digital Marketing Needs",
+    description: "As a full digital marketing agency, WebFX is equipped to build you a website that works for both users and search engines. Our expert digital marketing services can help maximize your new website in order to drive revenue for your business."
   }
 ]
 
@@ -187,9 +147,9 @@ const WebDesign = () => {
         wordone='Custom'
         wordtwo='Web Design'
         subtitle='Avoid falling into cookie-cutter designs. Express your company vibe through your own design and bring emphasis to where it matters most.'
-        className='mt-20' />
-      <Section variant="dark" className='pb-24'>
-        <div className="mx-auto max-w-7xl py-12">
+        className='mt-[110px]' />
+      <FullWidthSection variant="lime" className='pb-24'>
+        <div className="mx-auto max-w-7xl pt-12 px-8">
           <p>
             Your website is the face of your business in the online world, and it's essential that it leaves a lasting impression on your potential customers. At our web design service, we specialize in creating custom websites that not only look great but also function seamlessly and effectively.<br /><br />
 
@@ -198,31 +158,37 @@ const WebDesign = () => {
             We're committed to delivering exceptional results and providing our clients with a website that not only looks great but also delivers measurable results. Whether you need a simple brochure website or a complex e-commerce platform, we have the skills and expertise to bring your vision to life. Let us help you build a website that will make a lasting impression on your audience and help your business grow in the digital age.
           </p> 
         </div>
-      </Section> 
+      </FullWidthSection> 
 
-      <Section variant="light" className='rounded-t-3xl -mt-12'>  
-        <div className="mx-auto max-w-7xl py-12">
-          <h2 className="text-4xl mb-4 text-pretty font-sfHeavy text-center">
-            Our Web Design Packages
+      <FullWidthSection variant="light" className=''>  
+        <SvgDivider color="#65a30d" />
+        <div className="mx-auto max-w-7xl py-12 px-8">
+          <h2 className="uppercase text-4xl sm:text-7xl lg:text-8xl text-center font-sfBlack mb-8 text-slate-700">
+            Web Design Costs <br/>Made Clear
           </h2>
           <p className="text-xl text-pretty font-sfMediumHeavy text-center">
-            To make it simple, we have grouped our services into four packages that are sure to fit your online strategy.
+            We believe in transparency and clarity when it comes to web design costs. Our pricing is straightforward, with no hidden fees or surprises. Your website is completely customized to your needs. We do not recycle designs or use templates. This means that the cost of your website will depend on the complexity and features you require. 
+            <br/><br/> 
+            Connect with our web designers today to get your custom quote! But in the meantime, here are some of the factors that influence web design pricing.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">            
-            {packages.slice(0,4).map((item, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">   
+            {factors.map((item, index) => (
               <div key={index} className="mx-auto max-w-7xl">
                 <GrayCard
-                  title={`${item.title} Package`}
+                  title={item.title}
                   subtitle={item.subtitle}
                   description={item.description}
                   features={item.features}
                   price={item.price}
+                  hasLinkButton={true}
+                  link={item.link}
+                  linktitle={item.linktitle}
                 />
               </div>
-            ))}            
+            ))}
           </div>
         </div>
-      </Section>
+      </FullWidthSection>
 
       <Section className="rounded-3xl pb-20 -mt-8 ring-1 ring-amber-500 ring-offset-4 text-sky-50 z-30" variant="light">
         <div className="mx-auto w-full px-6 lg:px-8">
@@ -244,7 +210,7 @@ const WebDesign = () => {
             While web builders may seem like a convenient and inexpensive option for building websites, they often lack the customization and functionality required for a professional and effective online presence. Custom web design and development allows for greater flexibility, scalability, and search engine optimization, ultimately resulting in a more successful website.
           </p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 my-12">            
-            {cards.map((item, index) => (
+            {webbuilders.map((item, index) => (
               <div key={index} className="mx-auto max-w-7xl">
                 <GrayCard
                   title={item.title}

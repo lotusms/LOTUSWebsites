@@ -91,7 +91,7 @@ const Websites = () => {
 
   return (
     <div className="p-4 md:p-8 md:pb-12 bg-slate-700">
-      <FullWidthSection className="rounded-2xl" variant="lime" border="lime_on_dark">
+      <FullWidthSection className="rounded-2xl py-4" variant="lime" border="lime_on_dark">
         <div className="mx-auto px-4 md:px-12 py-8">
           <h2 className="uppercase text-4xl sm:text-7xl lg:text-8xl font-sfBlack mb-8 text-black/60">
             Web Design <br/>That Turns <span className="text-white ps-4">Clicks</span> <br/>into

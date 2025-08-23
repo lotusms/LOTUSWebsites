@@ -22,7 +22,7 @@ const FullWidthSection = ({children, variant, className = "", border = ""}) => {
   const borderClass = borderClasses[border];
 
   return (
-    <div className={`${variantClass} py-4 ${className} ${borderClass}`}>
+    <div className={`${variantClass} ${className} ${borderClass}`}>
       {children}
     </div>
   )
