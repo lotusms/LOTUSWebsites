@@ -400,3 +400,10 @@ button:disabled {
   color: #3182ce;
 }
 
+.card h4 {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+}
+
+.card p {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+}

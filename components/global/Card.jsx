@@ -9,6 +9,7 @@ const variantClasses = {
   bronze: 'bg-amber-600/80 p-6 sm:p-8',
   silver: 'bg-slate-300 p-6 sm:p-8',
   gold: 'bg-amber-500/80 p-6 sm:p-8',
+  lime: 'bg-lime-600/80 p-6 sm:p-8',
   dark: 'bg-slate-900 p-6 text-slate-50 sm:p-8',
   light: 'bg-slate-50 p-6 text-slate-900 sm:p-8',
 };
@@ -59,10 +60,10 @@ const Card = ({ children, variant, svgBackground = "", className= "", heightMatc
 }
 
 Card.propTypes = {
+  variant: PropTypes.oneOf(['gradient', 'dark', 'light', 'custom', 'slate', 'bronze', 'silver', 'gold', 'lime']),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   svgBackground: PropTypes.string,
-  variant: PropTypes.oneOf(['gradient', 'dark', 'light', 'blue', 'custom', 'slate', 'bronze', 'silver', 'gold']),
   heightMatch: PropTypes.bool,
   props: PropTypes.object,
 };

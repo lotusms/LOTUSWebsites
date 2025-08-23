@@ -10,8 +10,9 @@ import PageHead from '@/components/global/PageHead';
 import Link from 'next/link';
 import AwwwardWinning from '@/components/AwwwardWinning';
 import GrayCard from '@/components/global/GrayCard';
-import FullWidthSection from '@/components/global/FullWidthSection';
-import SvgDivider from '@/components/global/SvgDivider';
+import PageIntro from '@/components/global/PageIntro';
+import Cost from '@/components/webdesign/Cost';
+
 const banner = bannerImages.webDesignImage;
 
 const webbuilders = [
@@ -37,16 +38,16 @@ const webbuilders = [
 
 const factors = [
   {
-    title: "Website Functionality Needs",
-    description: "Ecommerce websites are far more complex than your average lead generation website. You’ll discuss any additional functionality you may need with your WebFX strategist which will play a part in your web design quote."
+    title: "Website Functionality",
+    description: "The more complex your website's functionality needs are, the more time and resources it will take to build. This includes features like e-commerce capabilities, Artificial Intelligence integration, custom integrations, and advanced user interactions."
   },
   {
     title: "Project Timeline",
-    description: "Project needs often vary from ~3 months all the way to 12 months. Your team’s flexibility will determine how custom we can get with building you a website that helps you reach your business goals."
+    description: "If you need your website completed quickly, it may require additional resources and overtime work, which can increase the overall cost. But in general, a website takes 3-6 months to complete, depending on its complexity and how quickly you can provide feedback and materials."
   },
   {
-    title: "Digital Marketing Needs",
-    description: "As a full digital marketing agency, WebFX is equipped to build you a website that works for both users and search engines. Our expert digital marketing services can help maximize your new website in order to drive revenue for your business."
+    title: "Digital Marketing",
+    description: "Depending on your digital marketing needs, additional features such as SEO optimization, content creation, and social media integration may be required, which can impact the overall cost. On-Page SEO is automatically included in all of our websites."
   }
 ]
 
@@ -148,47 +149,17 @@ const WebDesign = () => {
         wordtwo='Web Design'
         subtitle='Avoid falling into cookie-cutter designs. Express your company vibe through your own design and bring emphasis to where it matters most.'
         className='mt-[110px]' />
-      <FullWidthSection variant="lime" className='pb-24'>
-        <div className="mx-auto max-w-7xl pt-12 px-8">
-          <p>
-            Your website is the face of your business in the online world, and it's essential that it leaves a lasting impression on your potential customers. At our web design service, we specialize in creating custom websites that not only look great but also function seamlessly and effectively.<br /><br />
+      <PageIntro>
+        <p>
+          Your website is the face of your business in the online world, and it's essential that it leaves a lasting impression on your potential customers. At our web design service, we specialize in creating custom websites that not only look great but also function seamlessly and effectively.<br /><br />
 
-            We understand that every business has unique needs and goals, which is why we take a personalized approach to web design. Our team of experienced designers and developers work collaboratively to create a website that is tailored to meet the specific needs of your business. From the initial consultation to the final launch, we'll be with you every step of the way to ensure that your website is visually stunning, user-friendly, and optimized for search engines.<br /><br />
+          We understand that every business has unique needs and goals, which is why we take a personalized approach to web design. Our team of experienced designers and developers work collaboratively to create a website that is tailored to meet the specific needs of your business. From the initial consultation to the final launch, we'll be with you every step of the way to ensure that your website is visually stunning, user-friendly, and optimized for search engines.<br /><br />
 
-            We're committed to delivering exceptional results and providing our clients with a website that not only looks great but also delivers measurable results. Whether you need a simple brochure website or a complex e-commerce platform, we have the skills and expertise to bring your vision to life. Let us help you build a website that will make a lasting impression on your audience and help your business grow in the digital age.
-          </p> 
-        </div>
-      </FullWidthSection> 
+          We're committed to delivering exceptional results and providing our clients with a website that not only looks great but also delivers measurable results. Whether you need a simple brochure website or a complex e-commerce platform, we have the skills and expertise to bring your vision to life. Let us help you build a website that will make a lasting impression on your audience and help your business grow in the digital age.
+        </p> 
+      </PageIntro>
 
-      <FullWidthSection variant="light" className=''>  
-        <SvgDivider color="#65a30d" />
-        <div className="mx-auto max-w-7xl py-12 px-8">
-          <h2 className="uppercase text-4xl sm:text-7xl lg:text-8xl text-center font-sfBlack mb-8 text-slate-700">
-            Web Design Costs <br/>Made Clear
-          </h2>
-          <p className="text-xl text-pretty font-sfMediumHeavy text-center">
-            We believe in transparency and clarity when it comes to web design costs. Our pricing is straightforward, with no hidden fees or surprises. Your website is completely customized to your needs. We do not recycle designs or use templates. This means that the cost of your website will depend on the complexity and features you require. 
-            <br/><br/> 
-            Connect with our web designers today to get your custom quote! But in the meantime, here are some of the factors that influence web design pricing.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">   
-            {factors.map((item, index) => (
-              <div key={index} className="mx-auto max-w-7xl">
-                <GrayCard
-                  title={item.title}
-                  subtitle={item.subtitle}
-                  description={item.description}
-                  features={item.features}
-                  price={item.price}
-                  hasLinkButton={true}
-                  link={item.link}
-                  linktitle={item.linktitle}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </FullWidthSection>
+      <Cost data={factors} />
 
       <Section className="rounded-3xl pb-20 -mt-8 ring-1 ring-amber-500 ring-offset-4 text-sky-50 z-30" variant="light">
         <div className="mx-auto w-full px-6 lg:px-8">
