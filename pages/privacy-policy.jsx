@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { pageMetadata, bannerImages } from "@/data/metadata";
 import PageHead from '@/components/global/PageHead';
 import Section from '@/components/global/Section'
-import PageHeader from '@/components/global/PageHeader'
+import PageHeader from '@/components/global/PageHeader_bck'
 
 const PrivacyPolicy = () => {
   const meta = pageMetadata["/privacy-policy"];
@@ -40,7 +40,7 @@ const PrivacyPolicy = () => {
       </Head>
       
       <PageHeader pagetitle="Privacy Policy" />  
-      <Section variant="dark">
+      <Section variant="slate">
         <h2 className="text-lg font-semibold mt-8 mb-2">Introduction to Our Privacy Policy</h2>
         <p className="text-base">
           At LOTUS Marketing Solutions, we are committed to protecting your privacy. This privacy policy explains how we collect, use, and safeguard your information when you visit our website or use our services. By using our site, you consent to the practices outlined in this policy.

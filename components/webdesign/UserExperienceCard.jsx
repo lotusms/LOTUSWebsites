@@ -1,9 +1,23 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Card from "@/components/global/Card"
 import Image from "next/image"
 
 const UserExperienceCard = () => {
+  const [activeImage, setActiveImage] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage((prev) => (prev === 0 ? 1 : 0))
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const images = [
+    "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/webbuilders%2Fgoodui.png?alt=media&token=6bf0f6bc-4c30-415b-a2df-900bbe09eb04",
+    "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/webbuilders%2Fbadux.png?alt=media&token=c544a113-43e8-456d-bd53-ca455f3cf62e",
+  ]
 
   return (
     <Card variant="dark" className="p-6">
@@ -43,16 +57,21 @@ const UserExperienceCard = () => {
         </div>
 
         {/* Image Side */}
-          <div className="relative w-full md:w-1/2 rounded-lg overflow-hidden">
+        <div className="relative w-full md:w-1/2 rounded-lg overflow-hidden">
+          {images.map((src, idx) => (
             <Image
-              src="https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/webbuilders%2Ftemplate-1.png?alt=media&token=6e33e270-42c9-4f08-b15a-a6820ee6920d"
-              alt="Bloated Code example"
-              width={600}
-              height={400}
-              style={{ objectFit: "contain" }}
-              className="rounded-lg"
+              key={idx}
+              src={src}
+              alt={`User Experience example ${idx + 1}`}
+              width={800}
+              height={600}
+              className={`transition-opacity duration-700 ease-in-out rounded-lg ${
+                activeImage === idx ? "opacity-100 relative" : "opacity-0 absolute inset-0"
+              } object-contain`}
+              sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
             />
-          </div>
+          ))}
+        </div>
       </div>
     </Card>
   )

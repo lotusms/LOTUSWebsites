@@ -15,8 +15,8 @@ const BloatedCodeCard = () => {
             alt="Bloated Code example"
             width={600}
             height={400}
-            style={{ objectFit: "contain" }}
-            className="rounded-lg"
+            className="rounded-lg object-contain"
+            sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
           />
         </div>
 

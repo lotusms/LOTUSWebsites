@@ -51,7 +51,7 @@ const Cta = ({label = "Ready to Start Your Project?", link="", readmore = true})
 }
 
 Cta.propTypes = {
-  label: PropTypes.bool,
+  label: PropTypes.string,
   link: PropTypes.string,
   readmore: PropTypes.bool,
 };

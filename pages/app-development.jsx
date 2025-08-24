@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { pageMetadata, bannerImages } from "@/data/metadata";
 import ImageHeader from '@/components/global/ImageHeader'
 import Section from '@/components/global/Section'
-import Cta from '@/components/global/Cta'
 import PageHead from '@/components/global/PageHead';
 import GrayCard from '@/components/global/GrayCard';
 import Image from 'next/image';
@@ -254,7 +253,7 @@ const AppDevelopment = () => {
         wordtwo='Development'
         subtitle='Seamless app development for the App Store and Play Store that you can rely on. Put your business in the hands of your consumers.'
         className='mt-20' />
-      <Section variant="dark" className='pb-24'>
+      <Section variant="slate" className='pb-24'>
         <div className="mx-auto max-w-7xl py-12">
           <h2 className="text-4xl font-bold text-center mb-2">Why Do I Need a Mobile App?</h2>
           <p>
@@ -290,7 +289,7 @@ const AppDevelopment = () => {
           </div>          
         </div>
       </Section>
-      <Section variant="dark">
+      <Section variant="slate">
         <div className="mx-auto max-w-7xl py-12">
           <h3 className="text-3xl font-bold text-center text-slate-50">Why Do I Need a Mobile App?</h3>
           <p className="text-center text-slate-50 mt-4">A mobile app isn’t just a trend—it’s a powerful tool that can boost engagement, improve customer experience, and drive more sales. The question is not so much why you need a mobile app, but why your customers or clients need you to offer an app. Here are some of the key benefits of having a mobile app for your business:</p>  
@@ -334,9 +333,6 @@ const AppDevelopment = () => {
           </div>
         </div>
       </Section>
-
-
-      <Cta />
     </>
   )
 }

@@ -3,7 +3,6 @@
 import Head from 'next/head';
 import { pageMetadata, bannerImages } from "@/data/metadata";
 import ImageHeader from '@/components/global/ImageHeader'
-import Cta from '@/components/global/Cta'
 import PageHead from '@/components/global/PageHead';
 import PageIntro from '@/components/global/PageIntro';
 import Cost from '@/components/webdesign/Cost';
@@ -143,8 +142,6 @@ const WebDesign = () => {
       <WebBuilders />
 
       <FinancedSolutions />
-
-      <Cta />
     </>
   )
 }

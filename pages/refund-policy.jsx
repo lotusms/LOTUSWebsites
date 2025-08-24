@@ -3,7 +3,7 @@
 import Head from 'next/head';
 import { pageMetadata, bannerImages } from "@/data/metadata";
 import PageHead from '@/components/global/PageHead';
-import PageHeader from '@/components/global/PageHeader'
+import PageHeader from '@/components/global/PageHeader_bck'
 import Section from '@/components/global/Section'
 import Link from "next/link";
 
@@ -40,7 +40,7 @@ const RefundPolicy = () => {
       
       <PageHeader pagetitle="Refund Policy" />
 
-      <Section variant="dark">
+      <Section variant="slate">
         <h2 className="text-lg font-semibold mt-8 mb-2">Introduction to Our Refund Policy</h2>
         <p className="text-base mb-4">
           At LOTUS Marketing Solutions, we are committed to delivering high-quality web design and digital marketing services tailored to each client’s unique needs. As a service-based business, our time, resources, and expertise are invested upfront, which means we do not offer refunds once a project has begun or services have been rendered.

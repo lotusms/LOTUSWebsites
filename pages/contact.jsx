@@ -142,7 +142,7 @@ const Contact = () => {
         />
       </Head>
 
-      <Section variant="dark" className="mt-[90px]">
+      <Section variant="slate" className="mt-[90px]">
         <div className="mx-auto max-w-7xl pt-12 pb-2">
           <div className="flex flex-col items-center">
             <h1 className="text-5xl mb-4">Contact Us</h1>
@@ -238,7 +238,7 @@ const Contact = () => {
         </div>
       </Section>
 
-      <Section variant="dark" className="mt-8">
+      <Section variant="slate" className="mt-8">
         <div className="mx-auto max-w-7xl py-6">
           <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl mb-4">
             Frequently Asked Questions

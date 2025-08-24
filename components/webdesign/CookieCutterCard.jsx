@@ -62,12 +62,10 @@ const CookieCutterCard = () => {
               alt={`Cookie Cutter Design example ${idx + 1}`}
               width={600}
               height={400}
-              style={{ objectFit: "contain" }}
               className={`transition-opacity duration-700 ease-in-out rounded-lg ${
-                activeImage === idx
-                  ? "opacity-100 relative"
-                  : "opacity-0 absolute inset-0"
-              }`}
+                activeImage === idx ? "opacity-100 relative" : "opacity-0 absolute inset-0"
+              } object-contain`}
+              sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw"
             />
           ))}
         </div>

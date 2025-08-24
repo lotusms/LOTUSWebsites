@@ -33,7 +33,7 @@ const MobileApps = () => {
           </p>
         </div>
 
-        <Cta label={false} link="/app-development"/>
+        <Cta link="/app-development"/>
       </div>
     </FullWidthSection>
   )

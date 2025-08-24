@@ -106,7 +106,7 @@ const About = () => {
         />
       </Head>
       
-      <Section variant="dark" className="mt-[90px]">
+      <Section variant="slate" className="mt-[90px]">
         <div className="mx-auto max-w-7xl pt-12 pb-24">
           <div className="flex flex-col items-center">
             <h1 className="text-2xl md:text-4xl mb-4">About LOTUS Marketing Solutions</h1> 
@@ -130,7 +130,7 @@ const About = () => {
           <p>The lotus flower is a symbol of victory above adversity. It defies all of the natural floral laws. Its head is too large for its stem and its stem is too long relative to its width. It grows out of the mud in the depths of murky waters, doesn't receive sufficient sunlight, and yet, it blooms. It fights all the obstacles and adversities and makes its way through four feet of water or more to surface. This is the vibe and principle we want to bring to our clients.</p>
         </div>
       </Section>
-      <Section variant="dark" className="-mt-24 pt-24">
+      <Section variant="slate" className="-mt-24 pt-24">
         <div className="mx-auto max-w-7xl py-12">
           <div className="flex flex-col items-center">
             <h3 className="text-2xl md:text-4xl mb-4">How It Works</h3> 

@@ -3,7 +3,7 @@
 import Head from 'next/head';
 import { pageMetadata, bannerImages } from "@/data/metadata";
 import PageHead from '@/components/global/PageHead';
-import PageHeader from '@/components/global/PageHeader'
+import PageHeader from '@/components/global/PageHeader_bck'
 import Section from '@/components/global/Section'
 import Link from "next/link";
 
@@ -43,7 +43,7 @@ const TermsOfUse = () => {
 
       <PageHeader pagetitle="Terms Of Use" />  
 
-      <Section variant="dark">
+      <Section variant="slate">
         <h2 className="text-lg font-semibold mt-8 mb-2">Introduction to Our Terms of Use</h2>
         <p className="text-base">By continuing to browse and use this website you are agreeing to comply with and be bound by the terms and conditions described below, which governs LOTUS Marketing Solutions’s relationship with you in relation to this website. The term “us” or “we” refers to LOTUS Marketing Solutions whose registered office is lotusmarketingsolutions.com. The term “you” refers to the user or visitor of this website. The use of this website is subject to the following terms of use. </p>
 

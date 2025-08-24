@@ -4,7 +4,7 @@ import Alert from '../global/Alert'
 
 const FinancedSolutions = () => {
   return (
-    <Section variant="dark">
+    <Section variant="light">
       <div className="mx-auto max-w-7xl py-12">
         <div className="flex flex-col items-center">
           <h3 className="text-4xl mb-4">What Do I Do Then? I Can't Afford A Lot</h3> 
