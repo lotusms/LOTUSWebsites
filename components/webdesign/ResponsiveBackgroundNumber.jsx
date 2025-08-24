@@ -23,7 +23,7 @@ const ResponsiveBackgroundNumber = ({ children }) => {
     <p
       ref={ref}
       style={{ fontSize }}
-      className="absolute -top-8 sm:top-0 md:-top-4 left-2 font-sfBold text-slate-900/10 leading-none">
+      className="absolute -top-8 sm:top-0 md:-top-12 left-2 font-sfBold text-slate-900/10 leading-none">
       {children}
     </p>
   );
