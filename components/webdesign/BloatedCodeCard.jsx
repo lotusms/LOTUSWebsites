@@ -11,7 +11,7 @@ const BloatedCodeCard = () => {
         {/* Image Side */}
         <div className="relative w-full md:w-1/2 rounded-lg overflow-hidden">
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/webbuilders%2Ftemplate-1.png?alt=media&token=6e33e270-42c9-4f08-b15a-a6820ee6920d"
+            src="https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/webbuilders%2Ferrors.png?alt=media&token=b8c59a94-30dd-41b8-8a6c-17374e0f1493"
             alt="Bloated Code example"
             width={600}
             height={400}
@@ -47,7 +47,9 @@ const BloatedCodeCard = () => {
           <div className="mt-4">
             <a
               href="https://cariadmarketing.com/what-is-code-bloat-and-how-to-avoid-it/"
-              className="text-blue-500 hover:underline text-sm/9" >
+              className="text-blue-500 hover:underline text-sm/9"
+              target="_blank"
+              rel="noreferrer" >
               Read More About Overloaded Code
             </a>
           </div>

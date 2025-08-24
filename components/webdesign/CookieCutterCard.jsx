@@ -45,8 +45,11 @@ const CookieCutterCard = () => {
 
           <div className="mt-4">
             <a
-              href="https://www.getfoundquick.com/what-is-a-cookie-cutter-website/"
-              className="text-blue-500 hover:underline text-sm/9" >
+              href="https://www.friday.ie/blog/why-do-all-websites-look-the-same/"
+              className="text-blue-500 hover:underline text-sm/9"
+              target="_blank"
+              rel="noreferrer"
+            >
               Read More About Cookie Cutter Designs
             </a>
           </div>

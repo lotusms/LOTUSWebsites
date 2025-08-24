@@ -49,7 +49,9 @@ const UserExperienceCard = () => {
           <div className="mt-4">
             <a
               href="https://uxmag.com/articles/the-nine-principles-of-ux-design-psychology-can-you-predict-the-behavior-of-your-users"
-              className="text-blue-500 hover:underline text-sm/9" >
+              className="text-blue-500 hover:underline text-sm/9"
+              target="_blank"
+              rel="noreferrer" >
               Read More About User Experience
             </a>
           </div>
