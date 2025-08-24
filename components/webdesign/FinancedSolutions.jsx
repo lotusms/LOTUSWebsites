@@ -1,13 +1,15 @@
 import React from 'react'
-import Section from '../global/Section'
+import FullWidthSection from "../global/FullWidthSection"
+import SvgDivider from "../global/SvgDivider"
 import Alert from '../global/Alert'
 
 const FinancedSolutions = () => {
   return (
-    <Section variant="light">
+    <FullWidthSection variant="light">
+      <SvgDivider color="#65a30d" />
       <div className="mx-auto max-w-7xl py-12">
         <div className="flex flex-col items-center">
-          <h3 className="text-4xl mb-4">What Do I Do Then? I Can't Afford A Lot</h3> 
+          <h3 className="uppercase text-4xl sm:text-7xl lg:text-8xl font-sfBlack my-8 text-slate-800 text-center">What Do I Do If <br/>I Can't Afford A Lot</h3> 
           <p>
             We have crafted an in-house financing program to help you afford an amazing website build with all the functionality and design intricacies you could need. We will work with you to create a payment plan that fits your budget and allows you to get the website you need to grow your business. Here is how it works.
           </p>
@@ -53,7 +55,7 @@ const FinancedSolutions = () => {
           <Alert content="* Payment processing fees of 3% + $1.30 applies to all credit card processing payments"/>  
         </div> 
       </div>
-    </Section>
+    </FullWidthSection>
   )
 }
 

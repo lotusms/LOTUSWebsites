@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import FullWidthSection from "../global/FullWidthSection"
 import SvgDivider from "../global/SvgDivider"
 import CookieCutterCard from "./CookieCutterCard"
@@ -39,19 +38,6 @@ const WebBuilders = () => {
           <UserExperienceCard />
           <VulnerabilityCard />
         </div>
-
-        <p className="text-center">
-          Read{" "}
-          <Link
-            href="/blog/diy-website-builders-vs-custom-made-websites-which-one-is-right-for-you"
-            className="text-blue-500 hover:text-blue-600"
-            target="_blank"
-            rel="noreferrer"
-          >
-            this article{" "}
-          </Link>
-          to learn more about the pros and cons of web builders.
-        </p>
       </div>
     </FullWidthSection>
   )
