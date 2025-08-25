@@ -9,6 +9,8 @@ import Cost from '@/components/webdesign/Cost';
 import AwardWebsites from '@/components/webdesign/AwardWebsites';
 import WebBuilders from '@/components/webdesign/WebBuilders';
 import FinancedSolutions from '@/components/webdesign/FinancedSolutions';
+import Cta from '@/components/global/Cta';
+import FullWidthSection from '@/components/global/FullWidthSection';
 
 const banner = bannerImages.webDesignImage;
 
@@ -142,6 +144,12 @@ const WebDesign = () => {
       <WebBuilders />
 
       <FinancedSolutions />
+
+      <FullWidthSection variant="slate">
+        <div className="mx-auto max-w-7xl py-12 px-8">      
+          <Cta label='So?...Ready to Start Your Project?'  readmore={false} />
+        </div>
+      </FullWidthSection>
     </>
   )
 }
