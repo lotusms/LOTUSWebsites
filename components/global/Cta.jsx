@@ -4,11 +4,11 @@ import Button from "./Button";
 import useContactLinks from "@/hooks/useContactLinks";
 import PropTypes from "prop-types";
 
-const Cta = ({label = "Ready to Start Your Project?", link="", readmore = true}) => {
+const Cta = ({label = "Ready to Start Your Project?", link="", readmore = true, labelClassName = "text-white"}) => {
   const { phoneLink, emailLink } = useContactLinks();
 
   return (
-    <div className={`flex flex-col ${readmore ? "lg:flex-row px-12 justify-between" :"lg:flex-col justify-center"} mt-4 gap-8 w-full items-center py-8 text-white`}>
+    <div className={`flex flex-col ${readmore ? "lg:flex-row px-12 justify-between" :"lg:flex-col justify-center"} mt-4 gap-8 w-full items-center py-8 ${labelClassName}`}>
 
       <h3 className="text-2xl font-sfHeavy leading-relaxed">{label ? label : ""}</h3>
       {readmore 
@@ -54,6 +54,7 @@ Cta.propTypes = {
   label: PropTypes.string,
   link: PropTypes.string,
   readmore: PropTypes.bool,
+  labelClassName: PropTypes.string,
 };
 
 export default Cta
