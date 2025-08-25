@@ -5,11 +5,11 @@ import { ChevronUpDownIcon } from "@heroicons/react/20/solid"
 import { CheckIcon } from "@heroicons/react/20/solid"
 import PropTypes from "prop-types"
 
-export default function Dropdown({ label, options, selected, onChange }) {
+export default function Dropdown({ label, options, selected, onChange, labelclassName = "text-slate-200"}) {
   return (
     <div>
       {label && (
-        <label className="text-xl font-sfHeavy text-slate-200 mb-1">
+        <label className={`text-xl font-sfHeavy mb-1 ${labelclassName}`}>
           {label}
         </label>
       )}
@@ -60,4 +60,5 @@ Dropdown.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   selected: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  labelclassName: PropTypes.string,
 }
