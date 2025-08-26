@@ -8,6 +8,8 @@ import PageIntro from '@/components/global/PageIntro';
 import Cost from '@/components/app-development/Cost';
 import Why from '@/components/app-development/Why';
 import Apps from '@/components/app-development/Apps';
+import Cta from '@/components/global/Cta';
+import FullWidthSection from '@/components/global/FullWidthSection';
 
 const banner = bannerImages.appDevelopmentImage;
 
@@ -143,6 +145,12 @@ const AppDevelopment = () => {
       <Cost />
       <Why />
       <Apps />
+      
+      <FullWidthSection variant="slate">
+        <div className="mx-auto max-w-7xl py-12 px-8">      
+          <Cta label='So?...Ready to Start Your Project?'  readmore={false} />
+        </div>
+      </FullWidthSection>
     </>
   )
 }

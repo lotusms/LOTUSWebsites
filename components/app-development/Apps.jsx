@@ -1,7 +1,7 @@
 import React from 'react'
 import FullWidthSection from '../global/FullWidthSection'
 import SvgDivider from '../global/SvgDivider'
-import IPhoneFrame from './IPhoneFrame'
+import AppShowcase from "./AppShowcase";
 
 const judopediaVideo = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/apps%2FJudoPediaVideoRaw.mp4?alt=media&token=d7bf8a56-27fe-41ad-8b20-a249e546d4de"
 const mealsplangoVideo = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/apps%2FMealsPlanGO.VideoRaw.mp4?alt=media&token=3fa11c6f-9d31-423c-8b6b-881b340f18de" 
@@ -22,49 +22,28 @@ const Apps = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 mt-12">
-          <div className="flex flex-col items-center space-y-4 bg-lime-600 text-slate-800 p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div>
-                <h3 className="text-3xl font-sfBlack mb-4">JudoPedia</h3>
-                <p className="">
-                  JudoPedia is a comprehensive mobile app designed for judo enthusiasts of all levels. It offers a rich database of judo techniques, training drills, and competition strategies, making it an essential resource for athletes, coaches, and fans alike. With user-friendly navigation and high-quality video tutorials, JudoPedia provides an engaging learning experience that helps users improve their skills and deepen their understanding of the sport. Whether you're a beginner looking to learn the basics or an experienced judoka aiming to refine your techniques, JudoPedia is your go-to app for all things judo.
-                </p>
-              </div>
-              <div className="flex-shrink-0">
-                <IPhoneFrame src={judopediaVideo} />
-              </div>        
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center space-y-4 bg-lime-600 text-slate-800 p-6">
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-              <IPhoneFrame src={mealsplangoVideo} />
-              <div>
-                <h3 className="text-3xl font-sfBlack mb-4">
-                  Meals-Plan-GO!
-                </h3>
-                <p className="">
-                  Meals-Plan-GO! is a dynamic meal planning and recipe app designed to simplify your culinary experience. Whether you're a busy professional, a health-conscious individual, or someone who simply loves to cook, Meals-Plan-GO! has something for everyone. The app offers personalized meal plans based on your dietary preferences, nutritional goals, and lifestyle. With a vast collection of delicious recipes, easy-to-follow cooking instructions, and grocery lists, Meals-Plan-GO! makes it easy to prepare healthy and tasty meals at home. Say goodbye to mealtime stress and hello to a more organized and enjoyable cooking experience with Meals-Plan-GO!.
-                </p> 
-              </div>              
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center space-y-4 bg-lime-600 text-slate-800 p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div>
-                <h3 className="text-3xl font-sfBlack mb-4">
-                  CinemaClubTV
-                </h3>
-                <p className="">
-                  CinemaClubTV is an innovative streaming app that brings the magic of cinema right to your fingertips. Designed for movie enthusiasts, CinemaClubTV offers a vast library of films across various genres, from timeless classics to the latest blockbusters. The app features a user-friendly interface that makes it easy to browse, search, and discover new movies. With personalized recommendations based on your viewing history and preferences, CinemaClubTV ensures that you'll always find something exciting to watch. Whether you're in the mood for a thrilling action movie, a heartwarming drama, or a laugh-out-loud comedy, CinemaClubTV is your ultimate destination for all things film.
-                </p>
-              </div>
-              <div>
-                <IPhoneFrame src={cinemaclubtvVideo} /> 
-              </div>             
-            </div>
-          </div>
+          <AppShowcase
+            title="JudoPedia"
+            videoSrc={judopediaVideo}>
+            <p>
+              JudoPedia is a comprehensive mobile app designed for judo enthusiasts of all levels. It offers a rich database of judo techniques, training drills, and competition strategies, making it an essential resource for athletes, coaches, and fans alike. With user-friendly navigation and high-quality video tutorials, JudoPedia provides an engaging learning experience that helps users improve their skills and deepen their understanding of the sport. Whether you're a beginner looking to learn the basics or an experienced judoka aiming to refine your techniques, JudoPedia is your go-to app for all things judo.
+            </p>
+          </AppShowcase>
+          <AppShowcase
+            title="Meals-Plan-GO!"
+            videoSrc={mealsplangoVideo}
+            reverse>
+            <p>
+              Meals-Plan-GO! is a dynamic meal planning and recipe app designed to simplify your culinary experience. Whether you're a busy professional, a health-conscious individual, or someone who simply loves to cook, Meals-Plan-GO! has something for everyone. The app offers personalized meal plans based on your dietary preferences, nutritional goals, and lifestyle. With a vast collection of delicious recipes, easy-to-follow cooking instructions, and grocery lists, Meals-Plan-GO! makes it easy to prepare healthy and tasty meals at home. Say goodbye to mealtime stress and hello to a more organized and enjoyable cooking experience with Meals-Plan-GO!.
+            </p>  
+          </AppShowcase>
+          <AppShowcase
+            title="CinemaClubTV"
+            videoSrc={cinemaclubtvVideo}>
+              <p>
+                CinemaClubTV is an innovative streaming app that brings the magic of cinema right to your fingertips. Designed for movie enthusiasts, CinemaClubTV offers a vast library of films across various genres, from timeless classics to the latest blockbusters. The app features a user-friendly interface that makes it easy to browse, search, and discover new movies. With personalized recommendations based on your viewing history and preferences, CinemaClubTV ensures that you'll always find something exciting to watch. Whether you're in the mood for a thrilling action movie, a heartwarming drama, or a laugh-out-loud comedy, CinemaClubTV is your ultimate destination for all things film.
+              </p>
+          </AppShowcase>
         </div>
       </div>
     </FullWidthSection>
