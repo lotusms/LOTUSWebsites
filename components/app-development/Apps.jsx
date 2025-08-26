@@ -1,11 +1,11 @@
 import React from 'react'
 import FullWidthSection from '../global/FullWidthSection'
 import SvgDivider from '../global/SvgDivider'
-import Image from 'next/image'
+import IPhoneFrame from './IPhoneFrame'
 
-const judopedia = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/apps%2FJudoPedia.png?alt=media&token=8e0f55b3-f11c-45f2-a53e-0bedf7d53fc3"
-
-const forkcastmeals = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/apps%2FForkastMeals.png?alt=media&token=38b67450-1914-4524-b7b2-e8695ed15f7b"
+const judopediaVideo = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/apps%2FJudoPediaVideoRaw.mp4?alt=media&token=d7bf8a56-27fe-41ad-8b20-a249e546d4de"
+const mealsplangoVideo = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/apps%2FMealsPlanGO.VideoRaw.mp4?alt=media&token=3fa11c6f-9d31-423c-8b6b-881b340f18de" 
+const cinemaclubtvVideo = "https://firebasestorage.googleapis.com/v0/b/lotuswebsites.firebasestorage.app/o/apps%2FCinemaClubVideoRaw.mp4?alt=media&token=a51adcaa-c9a1-474a-890b-8de7dc467c44"
 
 const Apps = () => {
   return (
@@ -23,40 +23,46 @@ const Apps = () => {
         </div>
         <div className="grid grid-cols-1 gap-8 mt-12">
           <div className="flex flex-col items-center space-y-4 bg-lime-600 text-slate-800 p-6">
-            <div className='flex flex-col md:flex-row gap-4'>
-              <div className='md:w-3/4'>
-                <h3 className="text-3xl font-sfBlack mb-4">
-                  JudoPedia
-                </h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div>
+                <h3 className="text-3xl font-sfBlack mb-4">JudoPedia</h3>
                 <p className="">
                   JudoPedia is a comprehensive mobile app designed for judo enthusiasts of all levels. It offers a rich database of judo techniques, training drills, and competition strategies, making it an essential resource for athletes, coaches, and fans alike. With user-friendly navigation and high-quality video tutorials, JudoPedia provides an engaging learning experience that helps users improve their skills and deepen their understanding of the sport. Whether you're a beginner looking to learn the basics or an experienced judoka aiming to refine your techniques, JudoPedia is your go-to app for all things judo.
                 </p>
               </div>
-              <div className='md:w-1/4'>
-                <Image 
-                  src={judopedia} 
-                  alt="JudoPedia App Screenshot" 
-                  width={300}
-                  height={300}
-                  className="w-full h-48 object-cover rounded-lg shadow-lg ring-2 ring-offset-4 ring-slate-800 ring-offset-lime-600" />   
-              </div>             
+              <div className="flex-shrink-0">
+                <IPhoneFrame src={judopediaVideo} />
+              </div>        
             </div>
-
           </div>
+
           <div className="flex flex-col items-center space-y-4 bg-lime-600 text-slate-800 p-6">
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-              <Image 
-                src={forkcastmeals} 
-                alt="Forkcast Meals App Screenshot" 
-                width={300}
-                height={300}
-                className="w-full h-48 object-cover rounded-lg shadow-lg ring-2 ring-offset-4 ring-slate-800 ring-offset-lime-600" />   
+              <IPhoneFrame src={mealsplangoVideo} />
+              <div>
                 <h3 className="text-3xl font-sfBlack mb-4">
-                  Forkcast Meals
+                  Meals-Plan-GO!
                 </h3>
                 <p className="">
-                  Forkcast Meals is a dynamic meal planning and recipe app designed to simplify your culinary experience. Whether you're a busy professional, a health-conscious individual, or someone who simply loves to cook, Forkcast Meals has something for everyone. The app offers personalized meal plans based on your dietary preferences, nutritional goals, and lifestyle. With a vast collection of delicious recipes, easy-to-follow cooking instructions, and grocery lists, Forkcast Meals makes it easy to prepare healthy and tasty meals at home. Say goodbye to mealtime stress and hello to a more organized and enjoyable cooking experience with Forkcast Meals.
+                  Meals-Plan-GO! is a dynamic meal planning and recipe app designed to simplify your culinary experience. Whether you're a busy professional, a health-conscious individual, or someone who simply loves to cook, Meals-Plan-GO! has something for everyone. The app offers personalized meal plans based on your dietary preferences, nutritional goals, and lifestyle. With a vast collection of delicious recipes, easy-to-follow cooking instructions, and grocery lists, Meals-Plan-GO! makes it easy to prepare healthy and tasty meals at home. Say goodbye to mealtime stress and hello to a more organized and enjoyable cooking experience with Meals-Plan-GO!.
+                </p> 
+              </div>              
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center space-y-4 bg-lime-600 text-slate-800 p-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div>
+                <h3 className="text-3xl font-sfBlack mb-4">
+                  CinemaClubTV
+                </h3>
+                <p className="">
+                  CinemaClubTV is an innovative streaming app that brings the magic of cinema right to your fingertips. Designed for movie enthusiasts, CinemaClubTV offers a vast library of films across various genres, from timeless classics to the latest blockbusters. The app features a user-friendly interface that makes it easy to browse, search, and discover new movies. With personalized recommendations based on your viewing history and preferences, CinemaClubTV ensures that you'll always find something exciting to watch. Whether you're in the mood for a thrilling action movie, a heartwarming drama, or a laugh-out-loud comedy, CinemaClubTV is your ultimate destination for all things film.
                 </p>
+              </div>
+              <div>
+                <IPhoneFrame src={cinemaclubtvVideo} /> 
+              </div>             
             </div>
           </div>
         </div>
