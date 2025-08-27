@@ -78,7 +78,7 @@ const About = () => {
           <p>
             The lotus flower is a symbol of victory above adversity. It defies all of the natural floral laws. Its head is too large for its stem and its stem is too long relative to its width. It grows out of the mud in the depths of murky waters, doesn't receive sufficient sunlight, and yet, it blooms. It fights all the obstacles and adversities and makes its way through four feet of water or more to surface. This is the vibe and principle we want to bring to our clients.
             <br /><br />
-            We beleive that everyone has a lotus within them and given the right environment, it will bloom. We want to help our clients bloom and reach their full potential by providing them with affordable solutions that will help them grow their business. 
+            We believe that everyone has a lotus within them and given the right environment, it will bloom. We want to help our clients bloom and reach their full potential by providing them with affordable solutions that will help them grow their business. 
             <br /><br />
             I know that everyone makes similar claims, but we are different. Over the years, we have spent countless hours refining our processes and services to ensure that they are affordable yet effective and profitable for us as well as our clients. And one of the main steps we have taken is to focus on providing our clients with an a-la-cart system that allows them to select only the services they need and not entire enterprise systems that they will never use. Which brings us back to the LOTUS name. If you ever wondered why it is uppercased, it's because it's not a word, but an acronym that stands for "Leaving Out The Unnecessary Stuff".
           </p>
