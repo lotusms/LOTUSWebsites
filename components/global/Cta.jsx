@@ -4,7 +4,7 @@ import Button from "./Button";
 import useContactLinks from "@/hooks/useContactLinks";
 import PropTypes from "prop-types";
 
-const Cta = ({label = "Ready to Start Your Project?", link="", readmore = true, labelClassName = "text-white"}) => {
+const Cta = ({label = "Ready to Start Your Project?", link="", readmore = true, labelClassName = "text-white", linkname = "READ MORE"}) => {
   const { phoneLink, emailLink } = useContactLinks();
 
   return (
@@ -26,7 +26,7 @@ const Cta = ({label = "Ready to Start Your Project?", link="", readmore = true, 
             <p className="flex w-full mx-auto">or</p>
           </div>
           <Button as="link" href={link} variant="secondary">
-            READ MORE
+            {linkname ? linkname : "READ MORE"}
           </Button>
         </div>    
       )
@@ -55,6 +55,7 @@ Cta.propTypes = {
   link: PropTypes.string,
   readmore: PropTypes.bool,
   labelClassName: PropTypes.string,
+  linkname: PropTypes.string,
 };
 
 export default Cta

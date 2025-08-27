@@ -17,6 +17,8 @@ import faqs from '@/data/faqs';
 import Image from "next/image";
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
+import SvgDivider from '@/components/global/SvgDivider';
+import FullWidthSection from '@/components/global/FullWidthSection';
 
 const initialFormData = {
   name: "",
@@ -145,18 +147,13 @@ const Contact = () => {
       <Section variant="slate" className="mt-[90px]">
         <div className="mx-auto max-w-7xl pt-12 pb-2">
           <div className="flex flex-col items-center">
-            <h1 className="text-5xl mb-4">Contact Us</h1>
+            <h1 className="uppercase text-4xl sm:text-7xl lg:text-8xl text-center font-sfBlack mb-8 text-slate-200">Contact Us</h1>
           </div>
           <p className="mb-8">
             At LOTUS Marketing Solutions, your success is our priority. Whether you're reaching out for a new web design project, branding consultation, or SEO analysis, our team is here to help. Based in Harrisburg, PA, we proudly serve businesses nationwide with expert digital marketing services.
             <br /><br />
             Contact us today with no obligation. Our professional designers, developers, and strategists are ready to evaluate your project and deliver creative, results-driven solutions.
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-center mt-8 space-y-4 md:space-y-0 md:space-x-4">
-            <LinkButton text="Learn More About Our Web Design Services" href="/web-design" className="" />
-            <LinkButton text="Explore Our Brand Design Packages" href="/brand-design" className="" />
-            <LinkButton text="Explore Our PPC Marketing Services" href="/ppc-marketing" className="" />
-          </div>
         </div>
 
         <div className="mx-auto max-w-7xl py-12">
@@ -229,18 +226,20 @@ const Contact = () => {
         </div>
       </Section>
 
-      <Section className="mt-8">
-        <div className="mx-auto max-w-7xl py-6">
-          <h2 className="text-3xl mb-4">Why Contact LOTUS Marketing Solutions?</h2>
+      <FullWidthSection variant="light" className="">
+        <SvgDivider color="#1e293b" />
+        <div className="mx-auto max-w-7xl p-12">
+          <h2 className="uppercase text-4xl sm:text-7xl lg:text-8xl text-left font-sfBlack mb-8 text-lime-600">Why Contact <br/>LOTUS Marketing Solutions?</h2>
           <p>
-            Whether you're looking for a new website, SEO strategy, or digital branding support, our team is here to help. At LOTUS, we take pride in offering personalized, results-driven solutions for small and mid-sized businesses across the U.S. Reach out today and take the first step toward online success.
+            No one does web design or mobile app development like LOTUS Marketing Solutions. Based in Harrisburg, PA, we serve clients nationwide with expert digital marketing services. Whether you're looking to revamp your website, launch a new app, or boost your online presence with SEO, our team of professionals is here to help. Contact us today for a no-obligation consultation and discover how we can elevate your business to the next level.
           </p>
         </div>
-      </Section>
+      </FullWidthSection>
 
-      <Section variant="slate" className="mt-8">
-        <div className="mx-auto max-w-7xl py-6">
-          <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl mb-4">
+      <FullWidthSection variant="slate" className="mt-8">
+        <SvgDivider color="#f1f5f9" />
+        <div className="mx-auto max-w-7xl p-12">
+          <h3 className="uppercase text-4xl sm:text-7xl lg:text-8xl text-right font-sfBlack mb-8 text-lime-600">
             Frequently Asked Questions
           </h3>
           <dl className="mt-8 divide-y divide-white/10">
@@ -262,14 +261,14 @@ const Contact = () => {
             ))}
           </dl>
         </div>
-      </Section>
+      </FullWidthSection>
 
       <Section className="pt-10 pb-20" variant="light">
         <div className="mx-auto w-full px-6 lg:px-8">
           <h3 className="text-center text-4xl font-sfHeavy sm:text-5xl mt-16 mb-12">
             Local Marketing Services in<br/> Harrisburg, Lancaster, York & Carlisle
           </h3>
-          <p className="text-lg text-pretty mb-12">
+          <p className="text-pretty mb-12">
             Looking to grow your business in Harrisburg, Lancaster, York, Carlisle, and surrounding areas? We specialize in targeted digital marketing campaigns designed to generate high-quality leads for local businesses. Our team understands the unique challenges of marketing in Central Pennsylvania and helps businesses like yours attract and convert more customers through strategic SEO, paid advertising, social media marketing, and web design. 
             <br /><br />
             Let us connect you with your ideal customers in your target area. Let’s put your business on the map and drive real results!
@@ -282,15 +281,15 @@ const Contact = () => {
                   alt={area.city} 
                   width={600}
                   height={350}
-                  className="w-full h-[350px] object-cover rounded-lg shadow-lg ring-1 ring-amber-500 ring-offset-8 ring-offset-blue-900" />
+                  className="w-full h-[350px] object-cover rounded-lg shadow-lg ring-2 ring-lime-600 ring-offset-8 ring-offset-slate-100" />
                 <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-50 transition-opacity duration-300 rounded-lg shadow-lg"></div>
-                <h4 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-3xl">
+                <h4 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold font-sfHeavy text-5xl sm:text-5xl lg:text-6xl">
                   {area.city}
                 </h4>
               </div>
             ))}
           </div>
-          <p className="text-xl font-bold text-pretty text-center mt-12">
+          <p className="text-xl font-bold text-pretty font-sfHeavy text-center mt-12">
             If you are not located in these areas, don't worry! We work with clients all over the United States and beyond. Our team is equipped to handle projects of any size, no matter where you are located.
           </p>
         </div>
